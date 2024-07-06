@@ -10,6 +10,7 @@ module top_module (
             2'b01 : Q <= 0;
             2'b10 : Q <= 1;
             2'b11 : Q <= ~Q;
+            default:;
         endcase
     end
 
