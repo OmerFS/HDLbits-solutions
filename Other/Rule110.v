@@ -13,8 +13,6 @@ module top_module(
 			q <= data;
 		else begin 
             q[511:0] <= (~q & right)|(q & ~right)|(~left & right) ;
-            //Because q[511:1] is shorter than q[511:0] we can write like this:
-            //q <= q[511:1] ^ {q[510:0], 1'b0} ; it will fill empty position with zero
-		end
+	end
 	end
 endmodule
