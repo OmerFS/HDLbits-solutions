@@ -9,9 +9,9 @@ module top_module (
 
     always@(*) begin
         case(state)
-            A:next <= x ? B : A;
-            B:next <= x ? B : C;
-            C:next <= x ? B : A;
+            A:next = x ? B : A;
+            B:next = x ? B : C;
+            C:next = x ? B : A;
         endcase
     end
 
